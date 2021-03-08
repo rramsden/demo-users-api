@@ -4,5 +4,5 @@ ActiveRecord::Base.establish_connection(
 )
 
 Dir["app/models/**/*.rb"].each do |filename|
-  puts filename
+  require_relative File.join('..', filename)
 end
